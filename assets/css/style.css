@@ -602,11 +602,16 @@ p {
 /*=============================
 	06. Upcoming-Section CSS start
 ===============================*/
+@media (max-width: 575.98px) {
+  .upcoming-section .sub-title {
+    font-size: 12px;
+  }
+}
 .upcoming-section h4 {
   font-size: 1.1rem;
   font-weight: 600;
   font-family: var(--font-roboto);
-  color: var(--tertiary);
+  color: var(--primary);
 }
 @media (max-width: 575.98px) {
   .upcoming-section h4 {
@@ -619,7 +624,7 @@ p {
   height: 118.45px;
 }
 .upcoming-section .value-card div {
-  color: var(--tertiary);
+  color: var(--primary);
 }
 .upcoming-section .value-card div img {
   max-width: 50px;
@@ -680,7 +685,7 @@ p {
 }
 
 .footer-section {
-  background: url('../images/footer/footer.png');
+  background: url("../images/footer/footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
