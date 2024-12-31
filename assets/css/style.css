@@ -15,10 +15,11 @@
 05. About CSS
 06. Upcoming-Section CSS
 07. Product CSS
+08. Branch CSS
 
 *** Template Pages ***
 =========================
-
+09. About Page CSS
 ============================
 */
 /*=============================
@@ -643,6 +644,7 @@ p {
   background: white;
   padding: 5px;
   border: 1px solid var(--border-color);
+  border-radius: 5px;
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -692,6 +694,20 @@ p {
   .product-section .product-card .product-content .product-desc {
     font-size: 12px;
   }
+}
+
+/*=============================
+	08. Branch CSS Start
+===============================*/
+.branch-section .branch-card {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.branch-section .branch-card:hover {
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .footer-section {
@@ -774,4 +790,27 @@ p {
 }
 .footer-section .footer-top .footer-widget .footer-social ul li a:hover {
   background: var(--secondary);
+}
+
+/*=============================
+	09. About Page CSS Start
+===============================*/
+.why-us .why-us-content .why-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+.why-us .why-us-content .why-list .why-item i {
+  color: var(--primary);
+}
+@media (max-width: 991.98px) {
+  .why-us .why-us-content .why-list .why-item {
+    font-size: 16px;
+  }
 }
