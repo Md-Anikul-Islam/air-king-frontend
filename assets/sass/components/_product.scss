@@ -17,6 +17,12 @@
         .product-img{
             width: 100%;
             height: 250px;
+            @media (max-width: 991.98px) {
+                height: 200px;
+            }
+            @media (max-width: 425.98px) {
+                height: 125px;
+            }
             img{
                 width: 100%;
                 height: 100%;
