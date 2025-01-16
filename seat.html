@@ -30,7 +30,7 @@
       }
       .seat-box {
         max-width: 320px;
-        height: 100vh;
+        /* height: 100vh; */
         margin: auto;
         border-radius: 15px;
       }
@@ -48,22 +48,46 @@
         text-align: center;
         text-transform: uppercase;
       }
-    .seat-selected {
-    background: #E0115F;
-    border-color: #E0115F;
-    color: #fff;
-    }
-    .seat-available {
-    background: #fff;
-    color: #000;
-    border-color: #c8c8c8;
-    }
-    .seat-booked {
-    background: #d7d7d7 !important;
-    color: #9b9b9b !important;
-    cursor: not-allowed !important;
-    border: 1px solid #D7D7D7 !important;
-}
+      .seat-selected {
+        background: #e0115f;
+        border-color: #e0115f;
+        color: #fff;
+      }
+      .seat-available {
+        background: #fff;
+        color: #000;
+        border-color: #c8c8c8;
+      }
+      .seat-booked {
+        background: #d7d7d7 !important;
+        color: #9b9b9b !important;
+        cursor: not-allowed !important;
+        border: 1px solid #d7d7d7 !important;
+      }
+      .seat-means {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        border-radius: 4px;
+      }
+      .legend-label {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        color: #202020;
+      }
+      .available-example{
+        background: white;
+        border: 1px solid #000000;
+      }
+      .sold-example{
+        background: #d7d7d7;
+        border: 1px solid #d7d7d7;
+      }
+      .selected-example{
+        background: #e0115f;
+        border: 1px solid #e0115f;
+      }
     </style>
   </head>
 
@@ -201,64 +225,78 @@
         <div class="container">
           <div class="seat-box p-4 bg-white">
             <div class="seat-wrapper">
-                <div class="row g-5">
+              <div class="d-flex justify-content-around mb-4">
+                <ul class="d-flex align-items-center">
+                  <li class="seat-means available-example"></li>
+                  <li class="legend-label">Available</li>
+                </ul>
+                <ul class="d-flex align-items-center">
+                  <li class="seat-means sold-example"></li>
+                  <li class="legend-label">Sold</li>
+                </ul>
+                <ul class="d-flex align-items-center">
+                  <li class="seat-means selected-example"></li>
+                  <li class="legend-label">Selected</li>
+                </ul>
+              </div>
+              <div class="row g-5">
+                <div class="col-6">
+                  <div class="row g-3">
                     <div class="col-6">
-                      <div class="row g-3">
-                        <div class="col-6">
-                          <button class="seat seat-booked">A1</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">A2</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">B1</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">B2</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-selected">C1</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">C2</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">D1</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">D2</button>
-                        </div>
-                      </div>
+                      <button class="seat seat-booked">A1</button>
                     </div>
                     <div class="col-6">
-                      <div class="row g-3">
-                        <div class="col-6">
-                          <button class="seat seat-selected">A3</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">A4</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">B3</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-booked">B4</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">C3</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">C4</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">D3</button>
-                        </div>
-                        <div class="col-6">
-                          <button class="seat seat-available">D4</button>
-                        </div>
-                      </div>
+                      <button class="seat seat-available">A2</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">B1</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">B2</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-selected">C1</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">C2</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">D1</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">D2</button>
                     </div>
                   </div>
+                </div>
+                <div class="col-6">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <button class="seat seat-selected">A3</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">A4</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">B3</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-booked">B4</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">C3</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">C4</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">D3</button>
+                    </div>
+                    <div class="col-6">
+                      <button class="seat seat-available">D4</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
